@@ -1,4 +1,3 @@
-/* --- GLOBAL RESET & LAYOUT SYSTEMS --- */
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +28,6 @@ body {
     position: relative;
 }
 
-/* --- ANIMATED STARFIELD EFFECT --- */
 body::before {
     content: "";
     position: fixed;
@@ -53,7 +51,6 @@ body::before {
     to { transform: translateY(-1000px); }
 }
 
-/* --- SECTION MANAGEMENT --- */
 section {
     min-height: 100vh;
     height: 100vh;
@@ -88,7 +85,6 @@ section {
     box-shadow: 0 0 10px var(--purple-neon);
 }
 
-/* --- DYNAMIC NAVBAR LOGIC --- */
 header {
     position: fixed;
     top: 0;
@@ -97,13 +93,11 @@ header {
     transition: background 0.4s ease, border-color 0.4s ease;
 }
 
-/* Nasa pinakataas ang scroll line (Black Background) */
 header.nav-top {
     background: #04010a;
     border-bottom: 1px solid rgba(168, 85, 247, 0.15);
 }
 
-/* Kapag umalis o nag-slide na sa navbar frame (Transparent) */
 header.nav-scrolled {
     background: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0);
@@ -116,7 +110,6 @@ nav ul { display: flex; list-style: none; gap: 20px; }
 nav ul li a { color: var(--text-white); text-decoration: none; font-weight: 500; transition: 0.3s; }
 nav ul li a:hover { color: var(--purple-neon); text-shadow: 0 0 8px var(--purple-neon); }
 
-/* --- HOME HERO SECTION (TOUCHPAD SWIPE & SNAP-X DESIGN) --- */
 .hero-section { padding-top: 80px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
 
 .hero-slider-container {
@@ -145,7 +138,6 @@ nav ul li a:hover { color: var(--purple-neon); text-shadow: 0 0 8px var(--purple
     transform: scale(0.95);
 }
 
-/* Animated frame jump effect kapag naging visible ang card index node */
 .hero-carousel-slide.active-view {
     opacity: 1;
     transform: scale(1);
@@ -168,13 +160,11 @@ nav ul li a:hover { color: var(--purple-neon); text-shadow: 0 0 8px var(--purple
 }
 .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 25px var(--purple-neon); }
 
-/* --- ABOUT US --- */
 .about-grid { display: flex; align-items: center; gap: 50px; }
 .large-logo-blank { width: 220px; height: 220px; border: 2px dashed rgba(168, 85, 247, 0.4); display: flex; align-items: center; justify-content: center; color: var(--text-muted); border-radius: 12px; }
 .about-text h3 { font-size: 1.8rem; margin-bottom: 15px; color: #d8b4fe; }
 .about-text p { color: var(--text-muted); margin-bottom: 15px; }
 
-/* --- SPACE GLASSMORPHISM CARDS --- */
 .services-grid, .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 100%; }
 
 .service-card, .portfolio-item, .contact-box {
@@ -201,7 +191,6 @@ nav ul li a:hover { color: var(--purple-neon); text-shadow: 0 0 8px var(--purple
 .btn-details:hover { background: var(--purple-neon); color: white; }
 .tools { font-size: 0.85rem; color: #d8b4fe; margin-top: 10px; }
 
-/* --- PORTFOLIO DETAILS MODAL --- */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -242,7 +231,6 @@ nav ul li a:hover { color: var(--purple-neon); text-shadow: 0 0 8px var(--purple
 .modal-body-text p, .modal-body-text ul { font-size: 0.95rem; color: var(--text-muted); margin-top: 5px; }
 .modal-body-text ul { list-style-position: inside; padding-left: 5px; }
 
-/* --- MODERN TEAM SECTION (CLEAN HORIZONTAL CAROUSEL) --- */
 .team-slider-container {
     width: 100%;
     max-width: 950px; 
@@ -310,7 +298,6 @@ nav ul li a:hover { color: var(--purple-neon); text-shadow: 0 0 8px var(--purple
 .github-link { align-self: flex-start; margin-top: 18px; text-decoration: none; color: white; background: #160733; padding: 8px 20px; font-size: 0.9rem; border-radius: 4px; border: 1px solid var(--purple-neon); transition: 0.3s; }
 .github-link:hover { background: var(--purple-neon); box-shadow: 0 0 15px var(--purple-neon); }
 
-/* --- SHARED PROGRESS LINE BAR INDICATORS ARCHITECTURE --- */
 .progress-indicator-container, .home-indicator-container {
     display: flex;
     justify-content: center;
@@ -333,7 +320,6 @@ nav ul li a:hover { color: var(--purple-neon); text-shadow: 0 0 8px var(--purple
     box-shadow: 0 0 12px var(--purple-neon);
 }
 
-/* --- CONTACT FORM --- */
 .contact-box { max-width: 550px; margin: 0 auto; }
 .form-group { margin-bottom: 15px; }
 .form-group label { display: block; font-size: 0.9rem; margin-bottom: 5px; color: #cbd5e1; }
@@ -342,7 +328,6 @@ nav ul li a:hover { color: var(--purple-neon); text-shadow: 0 0 8px var(--purple
 .btn-submit { width: 100%; padding: 12px; background: var(--purple-neon); border: none; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; transition: 0.3s; }
 .btn-submit:hover { background: #6d28d9; box-shadow: 0 0 15px var(--purple-neon); }
 
-/* --- SHOOTING STAR LOGIC --- */
 .shooting-star {
     position: fixed;
     width: 2px;
@@ -362,7 +347,6 @@ nav ul li a:hover { color: var(--purple-neon); text-shadow: 0 0 8px var(--purple
 
 footer { text-align: center; padding: 25px; border-top: 1px solid rgba(168, 85, 247, 0.15); font-size: 0.85rem; color: var(--text-muted); background: #030107; }
 
-/* RESPONSIVE LAYOUT RESPONSES */
 @media (max-width: 900px) {
     .about-grid, .team-card { flex-direction: column; }
     .team-left { border-right: none; border-bottom: 1px solid rgba(168, 85, 247, 0.15); padding: 30px 0; }
