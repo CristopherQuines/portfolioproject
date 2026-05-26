@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech | Space Digital Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="mainHeader" class="nav-top">
+        <div class="navbar">
+            <div class="logo">
+                <div class="logo-placeholder"></div>
+                <span>NovaTech</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#team">Team Members</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-slider-container">
+            <div class="hero-carousel-track" id="homeTrack">
+                
+                <div class="hero-carousel-slide" data-index="0">
+                    <div class="slide-content">
+                        <h1>NovaTech</h1>
+                        <p class="tagline">Transforming Ideas into Powerful Digital Realities.</p>
+                        <a href="#contact" class="btn-primary">Inquire Now</a>
+                    </div>
+                </div>
+
+                <div class="hero-carousel-slide" data-index="1">
+                    <div class="slide-content">
+                        <h2>E-Commerce Platform</h2>
+                        <p class="tagline">Modern web storefronts equipped with smooth checkout systems.</p>
+                        <a href="#portfolio" class="btn-primary">View Projects</a>
+                    </div>
+                </div>
+
+                <div class="hero-carousel-slide" data-index="2">
+                    <div class="slide-content">
+                        <h2>Custom Mobile Apps</h2>
+                        <p class="tagline">Innovative iOS and Android apps built for scaling your business.</p>
+                        <a href="#portfolio" class="btn-primary">View Projects</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="home-indicator-container" id="homeProgressContainer">
+            </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-logo-zone">
+                    <div class="large-logo-blank">Logo Placeholder</div>
+                </div>
+                <div class="about-text">
+                    <h3>Ano ang ma-ooffer ng NovaTech?</h3>
+                    <p>We are a startup specializing in website design and application development. Our goal is to create responsive, user-friendly, and innovative digital solutions for clients.</p>
+                    <p>Nandito kami para mag-inquire at tumulong sa mga taong nangangailangan ng high-quality websites para sa kanilang kumpanya o personal na branding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <div class="line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Website Development</h3>
+                    <p>Custom sites for Business, School, Real Estate, and Booking.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Application Development</h3>
+                    <p>Food Ordering Apps, Delivery Tracking Apps, and more.</p>
+                </div>
+                <div class="service-card">
+                    <h3>UI/UX Design</h3>
+                    <p>High-fidelity website mockups and application prototypes.</p>
+                </div>
+                <div class="service-card">
+                    <h3>System Maintenance</h3>
+                    <p>Consistent bug fixing and crucial security updates.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Startup Branding</h3>
+                    <p>Creating your digital business profile from scratch.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Technical Support</h3>
+                    <p>Reliable maintenance and code support for your team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Portfolio</h2>
+                <div class="line"></div>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-project="apex">
+                    <span class="p-category">Business / Booking</span>
+                    <h3>Apex Real Estate Site</h3>
+                    <p>Seamless automated slot booking for property site viewing.</p>
+                    <p class="tools"><strong>Tools:</strong> React, Tailwind, MongoDB</p>
+                    <button class="btn-details">View Details</button>
+                </div>
+                <div class="portfolio-item" data-project="trendvibe">
+                    <span class="p-category">E-Commerce</span>
+                    <h3>TrendVibe Online Shop</h3>
+                    <p>Fully optimized digital cart system with local payment support.</p>
+                    <p class="tools"><strong>Tools:</strong> Next.js, Stripe, Node.js</p>
+                    <button class="btn-details">View Details</button>
+                </div>
+                <div class="portfolio-item" data-project="bitedash">
+                    <span class="p-category">Mobile App</span>
+                    <h3>BiteDash Ordering App</h3>
+                    <p>Real-time delivery tracking and dynamic notification controls.</p>
+                    <p class="tools"><strong>Tools:</strong> Flutter, Firebase, Maps API</p>
+                    <button class="btn-details">View Details</button>
+                </div>
+                <div class="portfolio-item" data-project="edusmart">
+                    <span class="p-category">UI/UX Prototype</span>
+                    <h3>EduSmart School Mockups</h3>
+                    <p>Intuitive user wireframe for grading portals and student logs.</p>
+                    <p class="tools"><strong>Tools:</strong> Figma, Adobe XD</p>
+                    <button class="btn-details">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="portfolioModal" class="modal-overlay">
+        <div class="modal-box">
+            <span class="close-modal">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Team Members</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="team-slider-container">
+                <div class="team-carousel-track" id="teamTrack">
+                    
+                    <div class="team-carousel-slide" data-index="0">
+                        <div class="team-card">
+                            <div class="team-left">
+                                <div class="member-photo">Pic Here</div>
+                            </div>
+                            <div class="team-right">
+                                <h3 class="member-name">Juan Dela Cruz</h3>
+                                <span class="member-role">Lead Frontend Developer</span>
+                                <p class="member-skills"><strong>Skills:</strong> HTML5, CSS3, JavaScript, React, Next.js, Git Pipeline</p>
+                                <div class="personal-projects">
+                                    <h4>Personal IT Projects:</h4>
+                                    <ul>
+                                        <li>• Customized E-Commerce Storefront with NextAuth</li>
+                                        <li>• Crypto Currency Tracker Dashboard Widget using WebSockets</li>
+                                    </ul>
+                                </div>
+                                <a href="https://github.com" target="_blank" class="github-link">GitHub Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-carousel-slide" data-index="1">
+                        <div class="team-card">
+                            <div class="team-left">
+                                <div class="member-photo">Pic Here</div>
+                            </div>
+                            <div class="team-right">
+                                <h3 class="member-name">John Doe</h3>
+                                <span class="member-role">Backend & Database Specialist</span>
+                                <p class="member-skills"><strong>Skills:</strong> Node.js, Express, MySQL, PostgreSQL, MongoDB, Docker</p>
+                                <div class="personal-projects">
+                                    <h4>Personal IT Projects:</h4>
+                                    <ul>
+                                        <li>• Automated Student Portal Database with Encryption Protocols</li>
+                                        <li>• Secured Real-Time Chat App API Backend Infrastructure</li>
+                                    </ul>
+                                </div>
+                                <a href="https://github.com" target="_blank" class="github-link">GitHub Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="progress-indicator-container" id="progressContainer">
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact & Inquire Us</h2>
+                <div class="line"></div>
+            </div>
+            <div class="contact-box">
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required placeholder="Project Inquiry / Type of Site">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required placeholder="Tell us about the company website you want..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateSubmitted">Date Submitted</label>
+                        <input type="text" id="dateSubmitted" readonly>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 NovaTech. All Rights Reserved. Built with Innovation.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
