@@ -1,26 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     
-    // --- 1. DYNAMIC NAVIGATION BAR BACKGROUND LOGIC ---
     const mainHeader = document.getElementById("mainHeader");
 
     window.addEventListener("scroll", function () {
-        // Kapag ang page view scroll ay nasa zero (0)
         if (window.scrollY === 0) {
             mainHeader.classList.add("nav-top");
             mainHeader.classList.remove("nav-scrolled");
         } else {
-            // Kapag nag-scroll pababa sa ibang slide area sections
             mainHeader.classList.add("nav-scrolled");
             mainHeader.classList.remove("nav-top");
         }
     });
 
-
-    // --- 2. HOME SECTION GESTURE SWIPE & LINE INDICATOR LOGIC ---
     const homeSlides = document.querySelectorAll(".hero-carousel-slide");
     const homeProgressContainer = document.getElementById("homeProgressContainer");
 
-    // Awtomatikong pagbuo ng line containers base sa dami ng slides sa Home
     homeSlides.forEach((_, index) => {
         const indicatorLine = document.createElement("div");
         indicatorLine.classList.add("progress-line-bar");
@@ -32,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const homeObserverOptions = {
         root: document.querySelector(".hero-slider-container"),
-        threshold: 0.6 // Mag-ti-trigger kapag 60% ng slide ay pumasok sa viewport frame
+        threshold: 0.6
     };
 
     const homeObserver = new IntersectionObserver((entries) => {
@@ -40,11 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
             if (entry.isIntersecting) {
                 const activeIndex = parseInt(entry.target.getAttribute("data-index"));
 
-                // I-update ang text animations class
                 homeSlides.forEach(slide => slide.classList.remove("active-view"));
                 entry.target.classList.add("active-view");
 
-                // Sindihan ang kaukulang line indicator sa ilalim
                 homeIndicatorBars.forEach(bar => bar.classList.remove("active"));
                 if (homeIndicatorBars[activeIndex]) {
                     homeIndicatorBars[activeIndex].classList.add("active");
@@ -55,12 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     homeSlides.forEach((slide) => homeObserver.observe(slide));
 
-
-    // --- 3. TEAM MEMBERS SECTION HORIZONTAL SWIPE LOGIC ---
     const teamSlides = document.querySelectorAll(".team-carousel-slide");
     const progressContainer = document.getElementById("progressContainer");
 
-    // Gawan ng indicators ang bawat team slide element
     teamSlides.forEach((_, index) => {
         const indicatorLine = document.createElement("div");
         indicatorLine.classList.add("progress-line-bar");
@@ -93,8 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     teamSlides.forEach((slide) => teamObserver.observe(slide));
 
-
-    // --- 4. PORTFOLIO MODAL MANIFEST ---
     const portfolioData = {
         apex: {
             title: "Apex Real Estate Site",
@@ -172,8 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target === modal) modal.classList.remove("open");
     });
 
-
-    // --- 5. DYNAMIC SHOOTING STARS ---
     function createSpaceShootingStar() {
         const star = document.createElement("div");
         star.className = "shooting-star";
@@ -195,19 +180,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(createSpaceShootingStar, 4000);
 
-
-    // --- 6. CONTACT FORM CONTEXT FIELD ---
-    const dateInput = document.getElementById("dateSubmitted");
-    if (dateInput) {
-        dateInput.value = new Date().toLocaleString();
-    }
-
-    const form = document.getElementById("inquiryForm");
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const clientName = document.getElementById("fullName").value;
-        alert(`Salamat sa iyong inquiry, ${clientName}! Matagumpay naming natanggap ang impormasyon ng inyong kumpanya.`);
-        form.reset();
-        if (dateInput) dateInput.value = new Date().toLocaleString();
-    });
-});
+    const dateInput = document.getElementById("date
